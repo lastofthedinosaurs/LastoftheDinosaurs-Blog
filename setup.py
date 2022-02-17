@@ -1,0 +1,37 @@
+from setuptools import setup
+
+setup(
+    name='lastofthedinosaursio',
+    version='1.0.0',
+    long_description=__doc__,
+    packages=['lastofthedinosaursio'],
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[
+        'Babel',
+        'blinker',
+        'click',
+        'dnspython',
+        'email-validator',
+        'Flask',
+        'Flask-Admin',
+        'Flask-BabelEx',
+        'Flask-Login',
+        'Flask-Mail',
+        'Flask-Principal',
+        'Flask-Security',
+        'Flask-SQLAlchemy',
+        'Flask-WTF',
+        'greenlet',
+        'idna',
+        'itsdangerous',
+        'Jinja2',
+        'MarkupSafe',
+        'passlib',
+        'pytz',
+        'speaklater',
+        'SQLAlchemy',
+        'Werkzeug',
+        'WTForms'
+    ]
+)

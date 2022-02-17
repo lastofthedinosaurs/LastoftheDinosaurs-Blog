@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% include "security/_messages.html" %}
+{{ super() }}
+<div class="container">
+    <br>
+    <div class="row border rounded overflow-hidden shadow-sm">
+        <div class="col-sm-10 col-sm-offset-1">
+            <h1>Flask-Admin example</h1>
+            <p class="lead">
+                Authentication
+            </p>
+            <p>
+                This example shows how you can use <a href="https://pythonhosted.org/Flask-Security/index.html" target="_blank">Flask-Security</a> for authentication.
+            </p>
+            {% if not current_user.is_authenticated %}
+            <p>You can register as a regular user, or log in as a superuser with the following credentials:
+            <ul>
+                <li>email: <b>admin</b></li>
+                <li>password: <b>admin</b></li>
+            </ul>
+            <p>
+                <a class="btn btn-primary" href="{{ url_for('security.login') }}">login</a> <a class="btn btn-default" href="{{ url_for('security.register') }}">register</a>
+            </p>
+            {% endif %}
+            <p>
+                <a class="btn btn-primary" href="/"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
+            </p>
+            <br />
+            <a class="btn btn-default" href="{{ url_for('create_post') }}">Create Post<a/>
+        </div>
+    </div>
+    <br>
+    {% include "featured.html" %}
+</div>
+{% endblock content %}
