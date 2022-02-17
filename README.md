@@ -14,10 +14,10 @@ This command will build two Docker containers based on data in docker-compose.ym
 docker-compose up -d
 ``` 
 
+## View the blog in your web browser
+[http://localhost](http://localhost)
+
 ## Stop the containers
 ```bash
 docker stop flask nginx
 ```
-
-## View the blog in your web browser
-[http://localhost](http://localhost)
