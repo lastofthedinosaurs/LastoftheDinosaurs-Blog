@@ -125,14 +125,6 @@ def blog():
     return render_template('blog.html', posts=posts, users=users)
 
 
-# @app.route("/")
-# @app.route("/home")
-# @login_required
-# def home():
-#     posts = Post.query.all()
-#     return render_template("home.html", user=current_user, posts=posts)
-
-
 @app.route("/create-post", methods=['GET', 'POST'])
 @login_required
 def create_post():

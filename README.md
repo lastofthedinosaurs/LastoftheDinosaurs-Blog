@@ -6,6 +6,7 @@ To get started, download the project and follow the install steps below to eithe
 
 ```bash
 git clone https://github.com/lastofthedinosaurs/LastoftheDinosaurs-Blog.git
+cd LastoftheDinosaurs-Blog
 ``` 
 ## Build with Docker
 This command will build two Docker containers based on data in docker-compose.yml and Dockerfile, one for our app and one for a reverse proxy.
